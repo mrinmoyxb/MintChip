@@ -12,7 +12,7 @@ struct Transaction: Identifiable {
     let date: String
     let institution: String
     let account: String
-    let merchnat: String
+    let merchant: String
     let amount: Double
     let type: TransactionType.RawValue
     var categoryId: Int
@@ -21,6 +21,10 @@ struct Transaction: Identifiable {
     var isTransfer: Bool
     var isExpense: Bool
     var isEdited: Bool
+    
+    var dateParsed: Date{
+        date.dateParsed()
+    }
 }
 
 enum TransactionType: String{

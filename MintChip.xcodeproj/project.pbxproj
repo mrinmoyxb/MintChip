@@ -15,6 +15,7 @@
 		F5D409CD2BE5BEA500D521C4 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D409CC2BE5BEA500D521C4 /* HomeScreen.swift */; };
 		F5D409CF2BE5C49E00D521C4 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D409CE2BE5C49E00D521C4 /* TransactionModel.swift */; };
 		F5D409D12BE5C66000D521C4 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D409D02BE5C66000D521C4 /* PreviewData.swift */; };
+		F5D409D32BE5C8CC00D521C4 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D409D22BE5C8CC00D521C4 /* TransactionRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		F5D409CC2BE5BEA500D521C4 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		F5D409CE2BE5C49E00D521C4 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		F5D409D02BE5C66000D521C4 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		F5D409D22BE5C8CC00D521C4 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +45,6 @@
 		F52147CD2BE4A17400FD29B6 = {
 			isa = PBXGroup;
 			children = (
-				F5D409D02BE5C66000D521C4 /* PreviewData.swift */,
 				F52147D82BE4A17400FD29B6 /* MintChip */,
 				F52147D72BE4A17400FD29B6 /* Products */,
 			);
@@ -68,6 +69,7 @@
 				F52147DD2BE4A17500FD29B6 /* Assets.xcassets */,
 				F52147DF2BE4A17500FD29B6 /* Preview Content */,
 				F5D409CA2BE5BB0D00D521C4 /* Extensions.swift */,
+				F5D409D02BE5C66000D521C4 /* PreviewData.swift */,
 			);
 			path = MintChip;
 			sourceTree = "<group>";
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				F5D409CC2BE5BEA500D521C4 /* HomeScreen.swift */,
+				F5D409D22BE5C8CC00D521C4 /* TransactionRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				F5D409CD2BE5BEA500D521C4 /* HomeScreen.swift in Sources */,
 				F5D409D12BE5C66000D521C4 /* PreviewData.swift in Sources */,
 				F52147DC2BE4A17400FD29B6 /* ContentView.swift in Sources */,
+				F5D409D32BE5C8CC00D521C4 /* TransactionRow.swift in Sources */,
 				F5D409CB2BE5BB0D00D521C4 /* Extensions.swift in Sources */,
 				F52147DA2BE4A17400FD29B6 /* MintChipApp.swift in Sources */,
 			);
