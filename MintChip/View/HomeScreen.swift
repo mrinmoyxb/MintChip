@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeScreen: View {
     var body: some View {
-        NavigationView{
+        NavigationStack{
             ScrollView{
                 VStack(alignment: .leading, spacing: 24){
                     Text("Overview")
@@ -26,6 +26,7 @@ struct HomeScreen: View {
                     Image(systemName: "bell.badge")
                         .symbolRenderingMode(.palette)
                         .foregroundStyle(Color.appIcon, .primary)
+                    
                 }
             }
         }

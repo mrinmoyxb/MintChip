@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Transaction: Identifiable {
+// Data Modal
+
+//* Identifiable: Identifiable protocol is used to ensure that each item in a collection has a unique identifier. This identifier helps distinguish individual items from one another
+
+struct Transaction: Identifiable, Codable {
     let id: Int
     let date: String
     let institution: String
@@ -22,8 +26,14 @@ struct Transaction: Identifiable {
     var isExpense: Bool
     var isEdited: Bool
     
+    // date format
     var dateParsed: Date{
         date.dateParsed()
+    }
+    
+    // credit + and debit -
+    var signedAmount: Double{
+        return type == TransactionType.credit.rawValue ? amount : -amount
     }
 }
 
