@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    
+    @ObservedObject var viewModel: TransactionsViewModel = TransactionsViewModel()
     var body: some View {
         NavigationStack{
             ScrollView{
@@ -15,6 +17,10 @@ struct HomeScreen: View {
                     Text("Overview")
                         .font(.title)
                         .bold()
+                    
+                    ForEach(viewModel.transactions){transaction in
+                        TransactionRow(transaction: transaction)
+                    }
                 }
                 .padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -8,10 +8,23 @@
 import Foundation
 final class TransactionsViewModel: ObservableObject{
     
-    @Published var transactions: [Transaction] = [Transaction]()
+    @Published var transactions: [TransactionModel] = [TransactionModel]()
+    @Published var errorMessage: String?
     private let urlString = "https://designcode.io/data/transactions.json"
     
-    func getTransactions() async throws -> [Transaction]{
+    init(){
+        Task{
+            do{
+                self.transactions = try await getTransactions()
+            }catch{
+                self.errorMessage = error.localizedDescription
+            }
+        }
+    }
+    
+    
+    // Function to fetch data from API
+    func getTransactions() async throws -> [TransactionModel]{
         
         //1. Attempt to create a URL object from the urlString
         guard let url = URL(string: urlString) else{
@@ -28,10 +41,8 @@ final class TransactionsViewModel: ObservableObject{
         }
         
         //3. It is used to decode JSON data, convert JSON data -> Transaction
-        let transactionsData = try JSONDecoder().decode([Transaction].self, from: data)
+        let transactionsData = try JSONDecoder().decode([TransactionModel].self, from: data)
         return transactionsData
     }
-    
-    
     
 }

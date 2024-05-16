@@ -10,7 +10,7 @@ import SwiftUIFontIcon
 
 struct TransactionRow: View {
     
-    var transaction: Transaction
+    var transaction: TransactionModel
     
     var body: some View {
         HStack(spacing: 20){

@@ -11,7 +11,7 @@ import Foundation
 
 //* Identifiable: Identifiable protocol is used to ensure that each item in a collection has a unique identifier. This identifier helps distinguish individual items from one another
 
-struct Transaction: Identifiable, Codable {
+struct TransactionModel: Identifiable, Codable {
     let id: Int
     let date: String
     let institution: String
