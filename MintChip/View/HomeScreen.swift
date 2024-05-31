@@ -9,7 +9,9 @@ import SwiftUI
 
 struct HomeScreen: View {
     
-    @ObservedObject var viewModel: TransactionsViewModel = TransactionsViewModel()
+//    @ObservedObject var viewModel: TransactionsViewModel = TransactionsViewModel()
+    @EnvironmentObject var viewModel: TransactionsViewModel
+    
     var body: some View {
         NavigationStack{
             ScrollView{
@@ -39,6 +41,4 @@ struct HomeScreen: View {
     }
 }
 
-#Preview {
-    HomeScreen()
-}
+
