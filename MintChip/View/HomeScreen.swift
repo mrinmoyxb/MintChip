@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeScreen: View {
     
-//    @ObservedObject var viewModel: TransactionsViewModel = TransactionsViewModel()
     @EnvironmentObject var viewModel: TransactionsViewModel
     
     var body: some View {

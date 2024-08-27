@@ -6,6 +6,9 @@
 //
 
 import Foundation
+
+typealias TransactionGroup = [String: [TransactionModel]]
+
 final class TransactionsViewModel: ObservableObject{
     
     @Published var transactions: [TransactionModel] = [TransactionModel]()
@@ -42,6 +45,13 @@ final class TransactionsViewModel: ObservableObject{
         let transactionsData = try JSONDecoder().decode([TransactionModel].self, from: data)
         print("Data: \(transactionsData)")
         return transactionsData
+    }
+    
+    
+    func groupTransactionByMonth() -> TransactionGroup{
+        guard !transactions.isEmpty else {return [:]}
+        let groupedTransactions = TransactionGroup(grouping: transactions) { $0.month }
+        return groupedTransactions
     }
     
 }

@@ -20,14 +20,15 @@ extension DateFormatter{
     static let allNumeric: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd/MM/yy"
-        
         return formatter
     }()
 }
 
 extension String{
     func dateParsed() -> Date{
-        guard let parsedDate = DateFormatter.allNumeric.date(from: self) else {return Date()}
+        guard let parsedDate = DateFormatter.allNumeric.date(from: self) else {
+            return Date()
+        }
         return parsedDate
     }
 }
